@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    kotlin("plugin.serialization") version "1.5.31"
 }
 
 android {
@@ -72,6 +73,9 @@ dependencies {
     implementation (libs.androidx.lifecycle.service)  // optional - helpers for implementing LifecycleOwner in a Service
     implementation (libs.androidx.lifecycle.process)  // optional - ProcessLifecycleOwner provides a lifecycle for the whole application process
     implementation (libs.androidx.lifecycle.reactivestreams.ktx)  // optional - ReactiveStreams support for LiveData
+
+    //Serialization
+    implementation(libs.kotlinx.serialization.json)
 
     // ----------------- Test Implementations ------------------------------ //
     testImplementation(libs.junit)
